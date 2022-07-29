@@ -1,0 +1,13 @@
+# final data  ################################################################
+exprs_data <- readRDS("./data/gxprs_base_pheno_alt_names.rds")
+
+# raw data  ################################################################
+raw_data <- readRDS("./data/gxprs_raw_base_pheno_alt_names_md5.rds")
+
+# raw data niave process: bk, log2, rsn  ################################################################
+raw_data_bklogrsn <- readRDS("./data/gxprs_bklog2rsnCombat_347_31431.rds")
+
+# limma results  ################################################################
+limma_df <- readRDS("./data/MRC_LBB_Limma.rds")
+
+limma_df_raw <- readRDS("./data/MRC_LBB_Raw_Limma.rds")

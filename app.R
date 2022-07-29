@@ -11,6 +11,9 @@ library(data.table)
 library(dplyr)
 library(shinythemes)
 library(RColorBrewer)
+
+setwd("/srv/shiny-server/app")
+
 # fonts https://fontawesome.com/ ####
 # final data  ################################################################
 exprs_data <- readRDS("./data/gxprs_base_pheno_alt_names.rds")
