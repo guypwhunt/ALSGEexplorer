@@ -13,7 +13,7 @@ library(shinythemes)
 library(RColorBrewer)
 
 print(getwd())
-setwd("/srv/shiny-server/app")
+#setwd("/srv/shiny-server/app")
 
 # fonts https://fontawesome.com/ ####
 # final data  ################################################################
