@@ -11,9 +11,7 @@ library(data.table)
 library(dplyr)
 library(shinythemes)
 library(RColorBrewer)
-
-print(getwd())
-#setwd("/srv/shiny-server/app")
+library(markdown)
 
 # fonts https://fontawesome.com/ ####
 # final data  ################################################################
