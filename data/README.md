@@ -2,59 +2,25 @@
 
 ## Contacts
 
-- Hamel Patel <hamel.patel@kcl.ac.uk>
-- Stephen J Newhouse <stephen.newhouse@kcl.ac.uk>
+- Renata Kabiljo <renata.kabiljo@kcl.ac.uk>
+- Guy Hunt <guy.hunt@kcl.ac.uk>
 
 ## The Data
 
-- GEO: GSE118553
-- cite: bioRxiv.org (version 0.1 of the manuscrit)
+- Brain Bank
+- Target ALS
 
 ## DE Gene Explorer
 
 Boxplot and Table of Results for selected gene.
 
-## Limma DE:Full Table
+## DESeq Results Table
 
-Use the search tabs to subset the table by Tissue/Brain Region, Experiment, logFC, P-value etc.
-
-**Tissues:**
-
-- Entorhinal_Cortex
-- Temporal_Cortex
-- Frontal_Cortex
-- Cerebellum
+Use the search tabs to subset the table by Dataset, logFC, adjusted P-value.
 
 **Experiment:**
 
-- AsympAD vs CO
-
-- AD vs AsympAD
-
-- AD v CO
-
-
-
-## Raw Data Explorer
-
-*If your favourite gene did not pass QC, you can look it up here.*
-
-We present the raw un-processed data and a basic background correceted, log2 transformed,
-rsn normalised (Tansformed) data for you to plot. The data was adjusetd for known bacthes using combat, and RIN
-
-**Note:**
-
-- Raw data are not background corrected  
-
-- The Transformed log2(Expression) Values will not be directly comparable to the final full quality controled data  
-
-- For Genes with mulitple probes, the probe with the maximin expression value was selected for plotting  
-
-
-
-**********
-
-
+- Case (ALS) vs Control
 
 ## Affiliations, Funding and Acknowledgements
 
