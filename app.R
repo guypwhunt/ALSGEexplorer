@@ -22,22 +22,23 @@ deseq_df <- readRDS("./data/combinedResults.rds")
 
 # adding html P.Value    adj.P.Val        B  ################################################################
 deseq_df <- deseq_df %>%
-  mutate(logFC = round(logFC, 2)) %>%
-  mutate(FDR.P.value = signif(adj.P.Val, 3)) %>%
-  mutate(gene_symbol = gsub(" .*$", "", Gene)) %>%
+  mutate(Log_Fold_Change = round(logFC, 2)) %>%
+  mutate(FDR_P_Value = signif(adj.P.Val, 3)) %>%
+  mutate(Gene_Symbol = gsub(" .*$", "", Gene)) %>%
   mutate(
-    gene_URL = paste(
+    Gene_Symbol_URL = paste(
       '<a href="http://www.genecards.org/cgi-bin/carddisp.pl?gene=',
-      gene_symbol,
+      Gene_Symbol,
       ' "target="_blank"',
       '">',
-      gene_symbol,
+      Gene_Symbol,
       '</a>',
       sep = ""
     )
   ) %>%
+  mutate(Entrez_ID = entrez_id) %>%
   mutate(
-    entrez_id = paste(
+    Entrez_ID_URL = paste(
       '<a href="https://www.ncbi.nlm.nih.gov/gene/',
       entrez_id,
       ' "target="_blank"',
@@ -47,12 +48,26 @@ deseq_df <- deseq_df %>%
       sep = ""
     )
   ) %>%
-  dplyr::select(Dataset,
-                Gene,
-                gene_URL,
-                entrez_id,
-                logFC,
-                FDR.P.value)
+  dplyr::select(
+    Dataset,
+    Gene,
+    Gene_Symbol,
+    Gene_Symbol_URL,
+    Entrez_ID,
+    Entrez_ID_URL,
+    Log_Fold_Change,
+    FDR_P_Value
+  )
+
+display_deseq_df <- dplyr::select(
+  deseq_df,
+  Dataset,
+  Gene,
+  Gene_Symbol_URL,
+  Entrez_ID_URL,
+  Log_Fold_Change,
+  FDR_P_Value
+)
 
 # UI ####
 ui <- dashboardPage(
@@ -78,18 +93,29 @@ ui <- dashboardPage(
   dashboardBody(tabItems(
     tabItem(
       tabName = "main_results",
-      fluidRow(br(),
-               # Sidebar panel for inputs #####################################################
-               sidebarPanel(
-                 # Input button for Gene
-                 selectizeInput(
-                   "Gene",
-                   "Select Gene:",
-                   choices = c(""),
-                   selected = ""
-                 )
-               )),
-      h2(textOutput("gene_name")),
+      fluidRow(
+        br(),
+        # Sidebar panel for inputs #####################################################
+        sidebarPanel(
+          # Input button for Gene
+          selectizeInput(
+            "Gene",
+            "Select Gene:",
+            choices = c(""),
+            selected = ""
+          ),
+        ),
+        sidebarPanel(
+          # Input button for Datasets
+          selectizeInput(
+            "Datasets",
+            "Select Dataset(s):",
+            choices = c(""),
+            selected = "",
+            multiple = TRUE
+          )
+        )
+      ),
       box(
         width = "105%",
         height = "105%",
@@ -108,7 +134,10 @@ ui <- dashboardPage(
       br(),
       h2("Table of Results"),
       DT::dataTableOutput("table"),
-      hr(),
+      br(),
+      downloadButton("downloadFilteredTable", "Download"),
+      br(),
+      br(),
       print("*Displayed values are FDR adjusted p-values obtained from DESeq."),
       br(),
       print("*Refer to following paper for more information:")
@@ -118,7 +147,9 @@ ui <- dashboardPage(
       br(),
       h2("Full Table of DESeq Results"),
       br(),
-      DT::dataTableOutput("fulltable")
+      DT::dataTableOutput("fulltable"),
+      br(),
+      downloadButton("downloadFullTable", "Download")
     ),
     tabItem(tabName = "readme",
             includeMarkdown("./data/README.md"))
@@ -133,11 +164,25 @@ server <- function(input, output, session) {
     input$Gene
   })
 
+  datasets <- reactive({
+    input$Datasets
+  })
+
   updateSelectizeInput(
     session,
     "Gene",
-    choices = c(sort(names(exprs_data)[2:ncol(exprs_data)])),
+    choices = sort(names(exprs_data)[2:ncol(exprs_data)]),
     selected = "SLC4A1",
+    server = TRUE
+  )
+
+  datasetNames <- unique(display_deseq_df$Dataset)
+
+  updateSelectizeInput(
+    session,
+    "Datasets",
+    choices = datasetNames,
+    selected = datasetNames[1:2],
     server = TRUE
   )
 
@@ -154,38 +199,44 @@ server <- function(input, output, session) {
       "#000000"
     )
 
-  output$exprPlot <- renderPlotly({
-    if (!target() == "") {
-      gg <-
-        qplot(
-          Phenotype,
-          eval(as.name(target())),
-          data = exprs_data,
-          fill = Phenotype,
-          ylab = NULL
-        ) +
-        geom_boxplot() +
-        facet_grid( ~ Dataset) +
-        #geom_point(position = position_jitterdodge(0.1)) +
-        #geom_smooth(method = "loess",
-        #            se = TRUE,
-        #            aes(group = 1, fill = Dataset)) +
-        scale_fill_manual(values = cbbPalette) +
-        ylab("")
-      gg <- gg + theme_tufte()
-      p <- ggplotly(gg) %>%
-        layout(
-          showlegend = FALSE,
-          margin = list(p = 5),
-          yaxis = list(title = "Normalised Gene Expression")
+  output$exprPlot <-
+    renderPlotly({
+      if (!target() == "") {
+        validate(
+          need(datasets(), "Please select a Gene and at least 1 Dataset.")
         )
-      p
-    }
-  })
+        gg <-
+          qplot(
+            Phenotype,
+            eval(as.name(target())),
+            data = exprs_data[exprs_data$Dataset %in% datasets(), ],
+            fill = Phenotype,
+            ylab = NULL
+          ) +
+          geom_boxplot() +
+          facet_grid(~ Dataset) +
+          #geom_point(position = position_jitterdodge(0.1)) +
+          #geom_smooth(method = "loess",
+          #            se = TRUE,
+          #            aes(group = 1, fill = Dataset)) +
+          scale_fill_manual(values = cbbPalette) +
+          ylab("")
+        gg <- gg + theme_tufte()
+        p <- ggplotly(gg) %>%
+          layout(
+            showlegend = FALSE,
+            margin = list(p = 5),
+            yaxis = list(title = "Normalised Gene Expression")
+          )
+        p
+      }
+    })
+
 
   output$table <- DT::renderDataTable({
     if (!target() == "") {
-      ss <- subset(deseq_df, Gene == target())
+      ss <- subset(display_deseq_df, Gene == target() & Dataset %in% datasets())
+
       ## datatable
       ss <-
         datatable(ss,
@@ -199,7 +250,7 @@ server <- function(input, output, session) {
   # full DESeq table #################################################################
   output$fulltable <- DT::renderDataTable({
     full_t <- datatable(
-      deseq_df,
+      display_deseq_df,
       escape = FALSE,
       options = list(pageLength = 10,
                      autoWidth = TRUE),
@@ -207,6 +258,48 @@ server <- function(input, output, session) {
     )
     full_t
   })
+
+  output$downloadFilteredTable <- downloadHandler(
+    filename = function() {
+      paste0(target(), "DESeqResults.csv")
+    },
+    content = function(file) {
+      write.csv(
+        subset(deseq_df, Gene == target() & Dataset %in% datasets()) %>%
+          dplyr::select(
+            Dataset,
+            Gene,
+            Gene_Symbol,
+            Entrez_ID,
+            Log_Fold_Change,
+            FDR_P_Value
+          )
+        ,
+        file,
+        row.names = FALSE
+      )
+    }
+  )
+
+  output$downloadFullTable <- downloadHandler(
+    filename = "DESeqResults.csv",
+    content = function(file) {
+      write.csv(
+        dplyr::select(
+          deseq_df,
+          Dataset,
+          Gene,
+          Gene_Symbol,
+          Entrez_ID,
+          Log_Fold_Change,
+          FDR_P_Value
+        )
+        ,
+        file,
+        row.names = FALSE
+      )
+    }
+  )
 }
 
 # run app ####

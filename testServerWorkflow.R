@@ -79,7 +79,8 @@ target <- "SLC4A1"
             eval(as.name(target)),
             data = exprs_data,
             fill = Phenotype,
-            ylab = NULL) +
+            ylab = NULL
+            ) +
       geom_boxplot() +
       facet_grid(~ Dataset) +
       #geom_point(position = position_jitterdodge(0.5)) +
