@@ -10,13 +10,13 @@
 - Brain Bank
 - Target ALS
 
-## DE Gene Explorer
+## Gene Expression Explorer
 
-Boxplot and Table of Results for selected gene.
+Boxplot and Table of Results for selected gene and dataset(s).
 
 ## DESeq Results Table
 
-Use the search tabs to subset the table by Dataset, logFC, adjusted P-value.
+Use the search tabs to subset the table by Dataset, log fold change, adjusted P-value.
 
 **Experiment:**
 
