@@ -166,7 +166,7 @@ server <- function(input, output, session) {
         ) +
         geom_boxplot() +
         facet_grid( ~ Dataset) +
-        geom_point(position = position_jitterdodge(0.1)) +
+        #geom_point(position = position_jitterdodge(0.1)) +
         #geom_smooth(method = "loess",
         #            se = TRUE,
         #            aes(group = 1, fill = Dataset)) +

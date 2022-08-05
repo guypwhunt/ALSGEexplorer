@@ -58,7 +58,7 @@ deseq_df <- deseq_df %>%
 # UI ####
   # fonts https://fontawesome.com/ ####
   #############
-target <- "SLC4A12"
+target <- "SLC4A1"
 
   output$exprPlot <- renderPlotly({
     cbbPalette <-
@@ -82,7 +82,7 @@ target <- "SLC4A12"
             ylab = NULL) +
       geom_boxplot() +
       facet_grid(~ Dataset) +
-      geom_point(position = position_jitterdodge(0.1)) +
+      #geom_point(position = position_jitterdodge(0.5)) +
       #geom_smooth(method = NULL, na.rm = TRUE, se=TRUE, aes(group=1, fill=Dataset)) +
       scale_fill_manual(values = cbbPalette) +
       ylab("")
