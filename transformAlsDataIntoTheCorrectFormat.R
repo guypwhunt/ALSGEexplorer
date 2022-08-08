@@ -159,8 +159,8 @@ transposedTaExpressionMatrix <- transposedTaExpressionMatrix[, c("Phenotype", "D
 transposedBbExpressionMatrix <- transposedBbExpressionMatrix[, c("Phenotype", "Dataset", colNamestransposedBbExpressionMatrix)]
 
 # Save datasets
-write.csv(transposedBbExpressionMatrix, "data/brainBainExpressionData.csv")
-write.csv(transposedTaExpressionMatrix, "data/targetAlsExpressionData.csv")
+#write.csv(transposedBbExpressionMatrix, "data/brainBainExpressionData.csv")
+#write.csv(transposedTaExpressionMatrix, "data/targetAlsExpressionData.csv")
 
 # Load datasets
 #transposedTaExpressionMatrix <- read.csv("data/brainBainExpressionData.csv")
@@ -183,7 +183,7 @@ transposedTaExpressionMatrix <- transposedTaExpressionMatrix[,colnames(transpose
 combinedExpressionData <- rbind(transposedBbExpressionMatrix, transposedTaExpressionMatrix)
 
 # Save datast
-write.csv(combinedExpressionData, "data/combinedExpressionData.csv")
+#write.csv(combinedExpressionData, "data/combinedExpressionData.csv")
 
 # Convert to tibble and save
 combinedExpressionData <- as_tibble(combinedExpressionData)
@@ -208,23 +208,74 @@ colnames(taDEResults)[which(names(taDEResults) == "padj")] <- "adj.P.Val"
 colnames(bbDEResults)[which(names(bbDEResults) == "log2FoldChange")] <- "logFC"
 colnames(taDEResults)[which(names(taDEResults) == "log2FoldChange")] <- "logFC"
 
-columns <- c("Dataset", "Gene", "entrez_id", "logFC", "adj.P.Val")
+columns <- c("Dataset", "Gene", "gene", "entrez_id", "logFC", "adj.P.Val")
 bbDEResults <- bbDEResults[, columns]
 taDEResults <- taDEResults[, columns]
 
 combinedResults <- rbind(bbDEResults, taDEResults)
 
 # Save datast
-write.csv(combinedResults, "data/combinedResults.csv")
+#write.csv(combinedResults, "data/combinedResults.csv")
 # combinedResults <- read.csv("data/combinedResults.csv", row.names = 1)
 head(combinedResults)
 
 # Convert to tibble and save
 combinedResults <- as.data.frame(combinedResults)
+
+combinedResults <- combinedResults %>%
+  mutate(Log_Fold_Change = round(logFC, 2)) %>%
+  mutate(FDR_P_Value = signif(adj.P.Val, 3)) %>%
+  mutate(Gene_Symbol = gsub(" .*$", "", Gene)) %>%
+  mutate(
+    Gene_Symbol_URL = paste(
+      '<a href="http://www.genecards.org/cgi-bin/carddisp.pl?gene=',
+      Gene_Symbol,
+      ' "target="_blank"',
+      '">',
+      Gene_Symbol,
+      '</a>',
+      sep = ""
+    )
+  ) %>%
+  mutate(Ensembl_ID = gene) %>%
+  mutate(
+    Ensembl_ID_URL = paste(
+      '<a href="http://www.ensembl.org/id/',
+      Ensembl_ID,
+      ' "target="_blank"',
+      '">',
+      Ensembl_ID,
+      '</a>',
+      sep = ""
+    )
+  ) %>%
+  mutate(Entrez_ID = entrez_id) %>%
+  mutate(
+    Entrez_ID_URL = paste(
+      '<a href="https://www.ncbi.nlm.nih.gov/gene/',
+      entrez_id,
+      ' "target="_blank"',
+      '">',
+      entrez_id,
+      '</a>',
+      sep = ""
+    )
+  ) %>%
+  dplyr::select(
+    Dataset,
+    Gene,
+    Gene_Symbol,
+    Gene_Symbol_URL,
+    Entrez_ID,
+    Entrez_ID_URL,
+    Ensembl_ID,
+    Ensembl_ID_URL,
+    Log_Fold_Change,
+    FDR_P_Value
+  )
+
+rownames(combinedResults) <- seq(nrow(combinedResults))
+
+head(combinedResults)
+
 saveRDS(combinedResults, "data/combinedResults.rds")
-
-combinedResults <- readRDS("data/combinedResults.rds")
-
-combinedResults <- combinedResults[combinedResults$adj.P.Val <0.05,]
-
-combinedResults <- combinedResults[duplicated(combinedResults$Gene),]

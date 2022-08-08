@@ -1,9 +1,14 @@
+![](kcl.png)
+![](perron.png)
+![](murdoch.png)
+
 # Guide to using the App
 
 ## Contacts
 
 - Renata Kabiljo <renata.kabiljo@kcl.ac.uk>
 - Guy Hunt <guy.hunt@kcl.ac.uk>
+- Alfredo Iacoangeli <alfredo.iacoangeli@kcl.ac.uk>
 
 ## The Data
 

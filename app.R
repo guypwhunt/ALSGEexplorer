@@ -20,51 +20,23 @@ exprs_data <- readRDS("./data/combinedExpressionData.rds")
 # deseq results  ################################################################
 deseq_df <- readRDS("./data/combinedResults.rds")
 
-# adding html P.Value    adj.P.Val        B  ################################################################
-deseq_df <- deseq_df %>%
-  mutate(Log_Fold_Change = round(logFC, 2)) %>%
-  mutate(FDR_P_Value = signif(adj.P.Val, 3)) %>%
-  mutate(Gene_Symbol = gsub(" .*$", "", Gene)) %>%
-  mutate(
-    Gene_Symbol_URL = paste(
-      '<a href="http://www.genecards.org/cgi-bin/carddisp.pl?gene=',
-      Gene_Symbol,
-      ' "target="_blank"',
-      '">',
-      Gene_Symbol,
-      '</a>',
-      sep = ""
-    )
-  ) %>%
-  mutate(Entrez_ID = entrez_id) %>%
-  mutate(
-    Entrez_ID_URL = paste(
-      '<a href="https://www.ncbi.nlm.nih.gov/gene/',
-      entrez_id,
-      ' "target="_blank"',
-      '">',
-      entrez_id,
-      '</a>',
-      sep = ""
-    )
-  ) %>%
-  dplyr::select(
-    Dataset,
-    Gene,
-    Gene_Symbol,
-    Gene_Symbol_URL,
-    Entrez_ID,
-    Entrez_ID_URL,
-    Log_Fold_Change,
-    FDR_P_Value
-  )
-
 display_deseq_df <- dplyr::select(
   deseq_df,
   Dataset,
   Gene,
   Gene_Symbol_URL,
   Entrez_ID_URL,
+  Ensembl_ID_URL,
+  Log_Fold_Change,
+  FDR_P_Value
+)
+
+deseq_df <- dplyr::select(deseq_df,
+  Dataset,
+  Gene,
+  Gene_Symbol,
+  Entrez_ID,
+  Ensembl_ID,
   Log_Fold_Change,
   FDR_P_Value
 )
@@ -265,15 +237,7 @@ server <- function(input, output, session) {
     },
     content = function(file) {
       write.csv(
-        subset(deseq_df, Gene == target() & Dataset %in% datasets()) %>%
-          dplyr::select(
-            Dataset,
-            Gene,
-            Gene_Symbol,
-            Entrez_ID,
-            Log_Fold_Change,
-            FDR_P_Value
-          )
+        subset(deseq_df, Gene == target() & Dataset %in% datasets())
         ,
         file,
         row.names = FALSE
@@ -291,6 +255,7 @@ server <- function(input, output, session) {
           Gene,
           Gene_Symbol,
           Entrez_ID,
+          Ensembl_ID,
           Log_Fold_Change,
           FDR_P_Value
         )
