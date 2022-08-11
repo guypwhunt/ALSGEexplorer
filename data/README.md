@@ -49,4 +49,4 @@ A.I is funded by the Motor Neurone Disease Association. This study represents in
 
 The views expressed are those of the authors and not necessarily those of the NHS, the NIHR, King’s College London, or the Department of Health and Social Care.
 
-Human post-mortem tissue was obtained from the King's College London London Neurodegenerative Diseases Brain Bank, a member of the Brains for Dementia Research Network and from Target ALS.
+Human post-mortem tissue was obtained from the Medical Research Council London Neurodegenerative Diseases Brain Bank (King’s College London), a member of the Brains for Dementia Research Network and from the Target ALS Human Postmortem Tissue Core, New York Genome Center for Genomics of Neurodegenerative Disease, the Amyotrophic Lateral Sclerosis Association and the Tow Foundation.

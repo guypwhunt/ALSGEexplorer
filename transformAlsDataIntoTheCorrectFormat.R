@@ -1,3 +1,4 @@
+library(biomaRt)
 library(shiny)
 library(ggplot2)
 library(shinydashboard)
@@ -11,7 +12,6 @@ library(dplyr)
 library(shinythemes)
 library(RColorBrewer)
 library(markdown)
-library(biomaRt)
 library(tibble)
 
 
@@ -93,11 +93,11 @@ bbExpressionMatrix <- merge(bbExpressionMatrix, G_list[, c("ensembl_gene_id", "e
 bbDEResults <- merge(bbDEResults, G_list[, c("ensembl_gene_id", "external_gene_name", "entrezgene_id")], by.x = "gene" , by.y = "ensembl_gene_id", all.x = TRUE)
 
 # Identify Cases and Controls
-bbExperimentDesign[bbExperimentDesign[, "Status"] == 1, "Phenotype"] <- "Control"
-bbExperimentDesign[bbExperimentDesign[, "Status"] == 2, "Phenotype"] <- "Case"
+bbExperimentDesign[bbExperimentDesign[, "Status"] == 1, "Phenotype"] <- " Control"
+bbExperimentDesign[bbExperimentDesign[, "Status"] == 2, "Phenotype"] <- "ALS"
 
-taExperimentDesign[taExperimentDesign[, "Status"] == 1, "Phenotype"] <- "Control"
-taExperimentDesign[taExperimentDesign[, "Status"] == 2, "Phenotype"] <- "Case"
+taExperimentDesign[taExperimentDesign[, "Status"] == 1, "Phenotype"] <- " Control"
+taExperimentDesign[taExperimentDesign[, "Status"] == 2, "Phenotype"] <- "ALS"
 
 # Fill in missing genes with ensemble IDs
 bbExpressionMatrix[is.na(bbExpressionMatrix[,"external_gene_name"]), "external_gene_name"] <- bbExpressionMatrix[is.na(bbExpressionMatrix[,"external_gene_name"]), "gene"]
@@ -294,3 +294,15 @@ rownames(combinedResults) <- seq(nrow(combinedResults))
 head(combinedResults)
 
 saveRDS(combinedResults, "data/combinedResults.rds")
+
+combinedResults <- readRDS("data/combinedResults.rds")
+head(combinedResults)
+
+combinedExpressionData <- readRDS("data/combinedExpressionData.rds")
+combinedExpressionData[1:5,1:5]
+
+combinedExpressionData[combinedExpressionData$Phenotype == "Case", "Phenotype"] <- "ALS"
+combinedExpressionData[combinedExpressionData$Phenotype == "Control", "Phenotype"] <- " Control"
+
+saveRDS(combinedExpressionData, "data/combinedExpressionData1.rds")
+

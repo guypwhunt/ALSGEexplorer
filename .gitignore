@@ -8,3 +8,5 @@ data/combinedExpressionData.rds
 data/combinedResults.rds
 data/
 .Rproj.user/
+transformAlsDataIntoTheCorrectFormat.R
+testServerWorkflow.R
