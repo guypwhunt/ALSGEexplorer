@@ -3,4 +3,8 @@
 .RData
 .Ruserdata
 
+data/matrix/
+data/combinedExpressionData.rds
+data/combinedResults.rds
 data/
+.Rproj.user/

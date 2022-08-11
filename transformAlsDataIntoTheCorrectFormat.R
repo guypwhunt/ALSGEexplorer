@@ -47,13 +47,15 @@ bbDEResults <- read.table("data/Matrices/BBgenesDEresOriginal171.txt", sep = '\t
 
 taExperimentDesign <- read.table("data/Matrices/TargetAlssamples.design.updated.site.sv1.234subjects.txt", sep = '\t', header = TRUE)
 taExpressionMatrix <- read.table("data/Matrices/TargetALSNormMatrix.txt", sep = '\t', header = TRUE)
-taDEResults <- read.table("data/Matrices/TargetAlsgenesDEres234subjectsTargetALS_site.txt", sep = '\t', header = TRUE)
+taDEResults <- read.table("data/Matrices/TargetAlsgenesDEres234subjectsTargetALS_site copy.txt", sep = '\t', header = TRUE)
 
 # Update the expression datasets column names
 colnames(taExpressionMatrix) <- c("gene", head(colnames(taExpressionMatrix), -1))
 
 # order the expression data and results by ensemble gene ID
 taExpressionMatrix <- taExpressionMatrix[order(taExpressionMatrix[,"gene"]),]
+taDEResults[,"gene"] <- rownames(taDEResults)
+taDEResults <- taDEResults[taDEResults[,"gene"] %in% taExpressionMatrix[,"gene"],]
 taDEResults <- taDEResults[order(taDEResults[,"gene"]),]
 
 bbExpressionMatrix[,"gene"] <- rownames(bbExpressionMatrix)
@@ -62,7 +64,7 @@ bbDEResults[,"gene"] <- rownames(bbDEResults)
 bbDEResults <- bbDEResults[order(bbDEResults[,"gene"]),]
 
 # Check that the expression data and DE results are in the same order
-all(taDEResults[,1] == taExpressionMatrix[,1])
+all(taDEResults[,"gene"] == taExpressionMatrix[,"gene"])
 all(bbExpressionMatrix[,"gene"] == bbDEResults[,"gene"])
 
 ### Identify gene symbols
@@ -152,11 +154,18 @@ transposedTaExpressionMatrix <- cbind(transposedTaExpressionMatrix, taExperiment
 colnames(transposedBbExpressionMatrix)[ncol(transposedBbExpressionMatrix)] <- "Phenotype"
 colnames(transposedTaExpressionMatrix)[ncol(transposedTaExpressionMatrix)] <- "Phenotype"
 
-transposedBbExpressionMatrix["Dataset"] <- rep("Brain Bank", nrow(transposedBbExpressionMatrix))
+####
+
+transposedBbExpressionMatrix["Dataset"] <- rep("KCL Brain Bank", nrow(transposedBbExpressionMatrix))
 transposedTaExpressionMatrix["Dataset"] <- rep("Target ALS", nrow(transposedTaExpressionMatrix))
 
-transposedTaExpressionMatrix <- transposedTaExpressionMatrix[, c("Phenotype", "Dataset", colNamestransposedTaExpressionMatrix)]
-transposedBbExpressionMatrix <- transposedBbExpressionMatrix[, c("Phenotype", "Dataset", colNamestransposedBbExpressionMatrix)]
+transposedBbExpressionMatrix["Tissue"] <- rep("Motor Cortex", nrow(transposedBbExpressionMatrix))
+transposedTaExpressionMatrix["Tissue"] <- rep("Motor Cortex", nrow(transposedTaExpressionMatrix))
+
+
+
+transposedTaExpressionMatrix <- transposedTaExpressionMatrix[, c("Phenotype", "Dataset", "Tissue", colNamestransposedTaExpressionMatrix)]
+transposedBbExpressionMatrix <- transposedBbExpressionMatrix[, c("Phenotype", "Dataset", "Tissue", colNamestransposedBbExpressionMatrix)]
 
 # Save datasets
 #write.csv(transposedBbExpressionMatrix, "data/brainBainExpressionData.csv")
@@ -193,8 +202,11 @@ saveRDS(combinedExpressionData, "data/combinedExpressionData.rds")
 head(bbDEResults)
 head(taDEResults)
 
-bbDEResults["Dataset"] <- "Brain Bank"
+bbDEResults["Dataset"] <- "KCL Brain Bank"
 taDEResults["Dataset"] <- "Target ALS"
+
+bbDEResults["Tissue"] <- "Motor Cortex"
+taDEResults["Tissue"] <- "Motor Cortex"
 
 colnames(bbDEResults)[which(names(bbDEResults) == "external_gene_name")] <- "Gene"
 colnames(taDEResults)[which(names(taDEResults) == "external_gene_name")] <- "Gene"
@@ -208,7 +220,7 @@ colnames(taDEResults)[which(names(taDEResults) == "padj")] <- "adj.P.Val"
 colnames(bbDEResults)[which(names(bbDEResults) == "log2FoldChange")] <- "logFC"
 colnames(taDEResults)[which(names(taDEResults) == "log2FoldChange")] <- "logFC"
 
-columns <- c("Dataset", "Gene", "gene", "entrez_id", "logFC", "adj.P.Val")
+columns <- c("Dataset", "Gene", "Tissue", "gene", "entrez_id", "logFC", "pvalue", "adj.P.Val")
 bbDEResults <- bbDEResults[, columns]
 taDEResults <- taDEResults[, columns]
 
@@ -224,6 +236,7 @@ combinedResults <- as.data.frame(combinedResults)
 
 combinedResults <- combinedResults %>%
   mutate(Log_Fold_Change = round(logFC, 2)) %>%
+  mutate(P_Value = signif(pvalue, 3)) %>%
   mutate(FDR_P_Value = signif(adj.P.Val, 3)) %>%
   mutate(Gene_Symbol = gsub(" .*$", "", Gene)) %>%
   mutate(
@@ -264,6 +277,7 @@ combinedResults <- combinedResults %>%
   dplyr::select(
     Dataset,
     Gene,
+    Tissue,
     Gene_Symbol,
     Gene_Symbol_URL,
     Entrez_ID,
@@ -271,6 +285,7 @@ combinedResults <- combinedResults %>%
     Ensembl_ID,
     Ensembl_ID_URL,
     Log_Fold_Change,
+    P_Value,
     FDR_P_Value
   )
 

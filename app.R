@@ -24,20 +24,24 @@ display_deseq_df <- dplyr::select(
   deseq_df,
   Dataset,
   Gene,
+  Tissue,
   Gene_Symbol_URL,
   Entrez_ID_URL,
   Ensembl_ID_URL,
   Log_Fold_Change,
+  P_Value,
   FDR_P_Value
 )
 
 deseq_df <- dplyr::select(deseq_df,
   Dataset,
   Gene,
+  Tissue,
   Gene_Symbol,
   Entrez_ID,
   Ensembl_ID,
   Log_Fold_Change,
+  P_Value,
   FDR_P_Value
 )
 
@@ -143,8 +147,8 @@ server <- function(input, output, session) {
   updateSelectizeInput(
     session,
     "Gene",
-    choices = sort(names(exprs_data)[2:ncol(exprs_data)]),
-    selected = "SLC4A1",
+    choices = sort(names(exprs_data)[3:ncol(exprs_data)]),
+    selected = "MC4R",
     server = TRUE
   )
 
@@ -177,30 +181,37 @@ server <- function(input, output, session) {
         validate(
           need(datasets(), "Please select a Gene and at least 1 Dataset.")
         )
-        gg <-
-          qplot(
-            Phenotype,
-            eval(as.name(target())),
-            data = exprs_data[exprs_data$Dataset %in% datasets(), ],
-            fill = Phenotype,
-            ylab = NULL
-          ) +
-          geom_boxplot() +
-          facet_grid(~ Dataset) +
-          #geom_point(position = position_jitterdodge(0.1)) +
-          #geom_smooth(method = "loess",
-          #            se = TRUE,
-          #            aes(group = 1, fill = Dataset)) +
-          scale_fill_manual(values = cbbPalette) +
-          ylab("")
-        gg <- gg + theme_tufte()
-        p <- ggplotly(gg) %>%
-          layout(
-            showlegend = FALSE,
-            margin = list(p = 5),
-            yaxis = list(title = "Normalised Gene Expression")
-          )
-        p
+
+        filtered_exprs_data <- exprs_data[exprs_data$Dataset %in% datasets(), ]
+
+        validate(
+          need(!all(is.na(filtered_exprs_data[,target()])), "The selected Gene was not identified in the selected Dataset(s)."))
+
+          gg <-
+            qplot(
+              Phenotype,
+              eval(as.name(target())),
+              data = filtered_exprs_data,
+              fill = Phenotype,
+              ylab = NULL
+            ) +
+            geom_boxplot() +
+            facet_grid(~ Dataset) +
+            #geom_point(position = position_jitterdodge(0.1)) +
+            #geom_smooth(method = "loess",
+            #            se = TRUE,
+            #            aes(group = 1, fill = Dataset)) +
+            scale_fill_manual(values = cbbPalette) +
+            ylab("")
+          gg <- gg + theme_tufte()
+          p <- ggplotly(gg) %>%
+            layout(
+              showlegend = FALSE,
+              margin = list(p = 5),
+              yaxis = list(title = "Normalised Gene Expression")
+            )
+          p
+
       }
     })
 
@@ -249,16 +260,7 @@ server <- function(input, output, session) {
     filename = "DESeqResults.csv",
     content = function(file) {
       write.csv(
-        dplyr::select(
-          deseq_df,
-          Dataset,
-          Gene,
-          Gene_Symbol,
-          Entrez_ID,
-          Ensembl_ID,
-          Log_Fold_Change,
-          FDR_P_Value
-        )
+        deseq_df
         ,
         file,
         row.names = FALSE
