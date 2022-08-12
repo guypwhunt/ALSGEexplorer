@@ -3,8 +3,8 @@
 .RData
 .Ruserdata
 
-data/matrix/
-data/combinedExpressionData.rds
-data/combinedResults.rds
-data/
+data/Matrices/
+data/testServerWorkflow.R
+data/transformAlsDataIntoTheCorrectFormat.R
+data/README.html
 .Rproj.user/
