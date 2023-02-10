@@ -48,7 +48,7 @@ deseq_df <- dplyr::select(deseq_df,
 # UI ####
 ui <- dashboardPage(
   skin = "blue",
-  dashboardHeader(title = "ALS Gene Expression Explorer (Kabiljo .et .al 2022)",
+  dashboardHeader(title = "ALS Gene Expression Explorer (Kabiljo et al., 2023)",
                   titleWidth = 600),
   ## dashboardSidebar  ####
   dashboardSidebar(## siderbar menu ####
@@ -102,7 +102,7 @@ ui <- dashboardPage(
           plotlyOutput(
             "exprPlot",
             width = "100%",
-            height = "400px",
+            height = "600px",
             inline = TRUE
           )
         )
@@ -114,9 +114,7 @@ ui <- dashboardPage(
       downloadButton("downloadFilteredTable", "Download"),
       br(),
       br(),
-      print("*Displayed values are FDR adjusted p-values obtained from DESeq."),
-      br(),
-      print("*Refer to following paper for more information:")
+      print("*Displayed values are FDR adjusted p-values obtained from DESeq.")
     ),
     tabItem(
       tabName = "DESeq_table",
@@ -197,10 +195,6 @@ server <- function(input, output, session) {
             ) +
             geom_boxplot() +
             facet_grid(~ Dataset) +
-            #geom_point(position = position_jitterdodge(0.1)) +
-            #geom_smooth(method = "loess",
-            #            se = TRUE,
-            #            aes(group = 1, fill = Dataset)) +
             scale_fill_manual(values = cbbPalette) +
             ylab("")
           gg <- gg + theme_tufte()
