@@ -1,0 +1,10 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+data/Matrices/
+data/testServerWorkflow.R
+data/transformAlsDataIntoTheCorrectFormat.R
+data/README.html
+.Rproj.user/
