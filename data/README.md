@@ -22,7 +22,7 @@
 
 Boxplot and Table of Results for selected gene and dataset(s).
 
-## DESeq Results Table
+## DESeq2 Results Table
 
 Use the search tabs to subset the table by Dataset, log fold change, P-value adjusted P-value.
 

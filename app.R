@@ -18,7 +18,8 @@ library(shinycssloaders)
 exprs_data <- readRDS("./data/combinedExpressionData.rds")
 
 # deseq results  ################################################################
-deseq_df <- readRDS("./data/combinedResults.rds")
+deseq_df <- readRDS("./data/combinedResults.rds") %>%
+  rename(BH_P_Value = "FDR_P_Value")
 
 display_deseq_df <- dplyr::select(
   deseq_df,
@@ -30,7 +31,7 @@ display_deseq_df <- dplyr::select(
   Ensembl_ID_URL,
   Log_Fold_Change,
   P_Value,
-  FDR_P_Value
+  BH_P_Value
 )
 
 deseq_df <- dplyr::select(deseq_df,
@@ -42,7 +43,7 @@ deseq_df <- dplyr::select(deseq_df,
   Ensembl_ID,
   Log_Fold_Change,
   P_Value,
-  FDR_P_Value
+  BH_P_Value
 )
 
 # UI ####
@@ -59,7 +60,7 @@ ui <- dashboardPage(
                        icon = icon("fas fa-cubes")
                      ),
                      menuItem(
-                       "DESeq Results Table",
+                       "DESeq2 Results Table",
                        tabName = "DESeq_table",
                        icon = icon("fas fa-table")
                      ),
@@ -114,7 +115,7 @@ ui <- dashboardPage(
       downloadButton("downloadFilteredTable", "Download"),
       br(),
       br(),
-      print("*Displayed values are FDR adjusted p-values obtained from DESeq.")
+      print("*Displayed values are BH adjusted p-values obtained from DESeq2.")
     ),
     tabItem(
       tabName = "DESeq_table",
@@ -238,7 +239,7 @@ server <- function(input, output, session) {
 
   output$downloadFilteredTable <- downloadHandler(
     filename = function() {
-      paste0(target(), "DESeqResults.csv")
+      paste0(target(), "DESeq2Results.csv")
     },
     content = function(file) {
       write.csv(
@@ -251,7 +252,7 @@ server <- function(input, output, session) {
   )
 
   output$downloadFullTable <- downloadHandler(
-    filename = "DESeqResults.csv",
+    filename = "DESeq2Results.csv",
     content = function(file) {
       write.csv(
         deseq_df

@@ -1,0 +1,377 @@
+﻿category,process,logAdjustedPValue,genes,genesV2
+BRAINBANK REACTOME,Amino acids regulate mTORC1,2.66356043,,
+BRAINBANK REACTOME,Cellular responses to stimuli,3.182057276,,
+BRAINBANK REACTOME,Cellular responses to stress,3.458562886,,
+BRAINBANK REACTOME,Metabolism,6.13032973,,
+BRAINBANK REACTOME,Neuronal System,3.5819822,,
+BRAINBANK REACTOME,Neurotransmitter receptors and postsynaptic signal transmission,2.46462504,,
+BRAINBANK REACTOME,"Respiratory ET, ATP synthesis by CC, heat production",10.01971027,,
+BRAINBANK REACTOME,The citric acid (TCA) cycle and respiratory electron transport,13.68800015,,
+BRAINBANK REACTOME,TP53 Regulates Metabolic Genes,2.695656647,,
+BRAINBANK REACTOME,Transmission across Chemical Synapses,4.09767075,,
+TARGET REACTOME,Interferon alpha/beta signaling,2.410962651,,
+TARGET REACTOME,Interferon gamma signaling,1.62140379,,
+TARGET REACTOME,Interferon Signaling,2.42434625,,
+BRAIN BANK PROCESS NETWORKS,CS_Regulation of CS rearrangement,2.429012295,ARP3,ACTR3
+TARGET PATHWAY MAPS,"POMC, alpha-MSH, AGRP, food intake, energy exp in hypothalamus",2.676543316,AGRP,AGRP
+TARGET PROCESS NETWORKS,ST_Neuropeptide signaling pathways,13.79089631,AGRP,AGRP
+TARGET PATHWAY MAPS,PF and maturation_POMC processing,20.6530749,alpha-MSH,AGRP
+TARGET PROCESS NETWORKS,ST_Neuropeptide signaling pathways,13.79089631,alpha-MSH,AGRP
+TARGET PATHWAY MAPS,"POMC, alpha-MSH, AGRP, food intake, energy exp in hypothalamus",2.676543316,alpha-MSH,AGRP
+BRAIN BANK PROCESS NETWORKS,PF_Folding in normal condition,3.330950864,Aha1,AHSA1
+BRAIN BANK PROCESS NETWORKS,Development_Blood vessel morphogenesis,1.79982837,Angiopoietin 1,ANGPT1
+TARGET PROCESS NETWORKS,Development_Blood vessel morphogenesis,1.428320885,Angiopoietin 1,ANGPT1
+TARGET PROCESS NETWORKS,Development_Blood vessel morphogenesis,1.428320885,APJ,APLNR
+BRAIN BANK PROCESS NETWORKS,Development_Blood vessel morphogenesis,1.79982837,APJ,APLNR
+BRAIN BANK PROCESS NETWORKS,MC_Nitric oxide signaling in the cardiovascular system,1.79982837,soluble,BASP1
+BRAIN BANK PROCESS NETWORKS,MC,2.429012295,soluble,BASP1
+BRAIN BANK PROCESS NETWORKS,Reproduction_GnRH signaling pathway,2.184827377,soluble,BASP1
+BRAIN BANK PROCESS NETWORKS,Reproduction_Gonadotropin regulation,2.429012295,soluble,BASP1
+BRAINBANK PATHWAY MAPS,"ST_Non-neuronal ACM1, ACM3 and ACM5 signaling",2.193018598,soluble,BASP1
+BRAIN BANK PROCESS NETWORKS,NP_Transmission of nerve impulse,3.330950864,P/Q-type calcium channel alpha-1A subunit,CACNA1A
+TARGET PROCESS NETWORKS,ST_Neuropeptide signaling pathways,13.79089631,Calcitonin receptor,CALCR
+BRAIN BANK PROCESS NETWORKS,Development_Neurogenesis_Axonal guidance,2.429012295,Calmodulin,CALM1
+BRAIN BANK PROCESS NETWORKS,MC_Nitric oxide signaling in the cardiovascular system,1.79982837,Calmodulin,CALM1
+BRAIN BANK PROCESS NETWORKS,MC,2.429012295,Calmodulin,CALM1
+BRAIN BANK PROCESS NETWORKS,NP_Transmission of nerve impulse,3.330950864,Calmodulin,CALM1
+BRAIN BANK PROCESS NETWORKS,Reproduction_GnRH signaling pathway,2.184827377,Calmodulin,CALM1
+BRAIN BANK PROCESS NETWORKS,Reproduction_Gonadotropin regulation,2.429012295,Calmodulin,CALM1
+BRAIN BANK PROCESS NETWORKS,ST_Neuropeptide signaling pathways,2.602511345,Calmodulin,CALM1
+BRAINBANK PATHWAY MAPS,Altered Ca2+ handling in heart failure,2.193018598,Calmodulin,CALM1
+BRAINBANK PATHWAY MAPS,G protein-coupled receptors signaling in lung cancer,2.591008732,Calmodulin,CALM1
+BRAINBANK PATHWAY MAPS,"NP_Regulation of mp, excitability of cortical pyramidal neurons",2.608533634,Calmodulin,CALM1
+BRAINBANK PATHWAY MAPS,ST_Calcium-mediated signaling,2.193018598,Calmodulin,CALM1
+BRAINBANK PATHWAY MAPS,ST_Erk Interactions: Inhibition of Erk,2.193018598,Calmodulin,CALM1
+BRAINBANK PATHWAY MAPS,"ST_Non-neuronal ACM1, ACM3 and ACM5 signaling",2.193018598,Calmodulin,CALM1
+BRAINBANK PATHWAY MAPS,Altered Ca2+ handling in heart failure,2.193018598,CaMK II delta,CAMK2D
+BRAIN BANK PROCESS NETWORKS,MC,2.429012295,CaMK IV,CAMK4
+BRAIN BANK PROCESS NETWORKS,NP_Transmission of nerve impulse,3.330950864,CaMK IV,CAMK4
+BRAINBANK PATHWAY MAPS,ST_Calcium-mediated signaling,2.193018598,CaMK IV,CAMK4
+BRAIN BANK PROCESS NETWORKS,CS_Regulation of CS rearrangement,2.429012295,CAPZA,CAPZA
+TARGET PROCESS NETWORKS,ST_Neuropeptide signaling pathways,13.79089631,CART,CARTPT
+BRAIN BANK PROCESS NETWORKS,CS_Regulation of CS rearrangement,2.429012295,Protein kinase G1,CCNG1
+BRAIN BANK PROCESS NETWORKS,Development_Blood vessel morphogenesis,1.79982837,Protein kinase G1,CCNG1
+BRAIN BANK PROCESS NETWORKS,MC_Nitric oxide signaling in the cardiovascular system,1.79982837,Protein kinase G1,CCNG1
+BRAIN BANK PROCESS NETWORKS,MC,2.429012295,Protein kinase G1,CCNG1
+BRAIN BANK PROCESS NETWORKS,Reproduction_GnRH signaling pathway,2.184827377,Protein kinase G1,CCNG1
+BRAIN BANK PROCESS NETWORKS,Reproduction_Gonadotropin regulation,2.429012295,Protein kinase G1,CCNG1
+BRAIN BANK PROCESS NETWORKS,PF_Folding in normal condition,3.330950864,TCP1-delta,CCT4
+BRAIN BANK PROCESS NETWORKS,PF_Folding in normal condition,3.330950864,TCP1-epsilon,CCT5
+BRAIN BANK PROCESS NETWORKS,PF_Folding in normal condition,3.330950864,TCP1-eta,CCT7
+BRAIN BANK PROCESS NETWORKS,PF_Folding in normal condition,3.330950864,TCP1-theta,CCT8
+BRAIN BANK PROCESS NETWORKS,Development_Neurogenesis_Axonal guidance,2.429012295,CDK5,CDK5
+BRAIN BANK PROCESS NETWORKS,Development_Blood vessel morphogenesis,1.79982837,CEACAM1,CEACAM1
+TARGET PATHWAY MAPS,PF and maturation_POMC processing,20.6530749,CLIP,CLIP1
+TARGET PROCESS NETWORKS,ST_Neuropeptide signaling pathways,13.79089631,CLIP,CLIP1
+BRAIN BANK PROCESS NETWORKS,CS_Regulation of CS rearrangement,2.429012295,Calponin-1,CNN1
+BRAIN BANK PROCESS NETWORKS,MC,2.429012295,Calponin-1,CNN1
+BRAINBANK PATHWAY MAPS,G protein-coupled receptors signaling in lung cancer,2.591008732,CNR1,CNR1
+BRAIN BANK PROCESS NETWORKS,Development_Blood vessel morphogenesis,1.79982837,CRH receptor 2,CRHR2
+BRAIN BANK PROCESS NETWORKS,ST_Neuropeptide signaling pathways,2.602511345,CRH receptor 2,CRHR2
+BRAIN BANK PROCESS NETWORKS,PF_Folding in normal condition,3.330950864,Alpha crystallin B,CRYAB
+BRAIN BANK PROCESS NETWORKS,MC,2.429012295,Alpha crystallin B,CRYAB
+BRAIN BANK PROCESS NETWORKS,Development_Blood vessel morphogenesis,1.79982837,DLL4,DLL4
+BRAIN BANK PROCESS NETWORKS,PF_Folding in normal condition,3.330950864,DNAJA2,DNAJA2
+BRAIN BANK PROCESS NETWORKS,CS_Regulation of CS rearrangement,2.429012295,Destrin,DSTN
+BRAIN BANK PROCESS NETWORKS,CS_Regulation of CS rearrangement,2.429012295,ECT2,ECT2
+BRAIN BANK PROCESS NETWORKS,Development_Blood vessel morphogenesis,1.79982837,Endothelin-1,EDN1
+BRAIN BANK PROCESS NETWORKS,MC_Nitric oxide signaling in the cardiovascular system,1.79982837,Endothelin-1,EDN1
+BRAINBANK PATHWAY MAPS,G protein-coupled receptors signaling in lung cancer,2.591008732,Endothelin-1,EDN1
+BRAIN BANK PROCESS NETWORKS,Development_Neurogenesis_Axonal guidance,2.429012295,Ephrin-A receptors,EFNA1
+BRAIN BANK PROCESS NETWORKS,Development_Neurogenesis_Axonal guidance,2.429012295,Ephrin-A receptor 5,EFNA5
+TARGET PROCESS NETWORKS,Development_Blood vessel morphogenesis,1.428320885,EGF,EGF
+BRAIN BANK PROCESS NETWORKS,Development_Blood vessel morphogenesis,1.79982837,EGF,EGF
+BRAIN BANK PROCESS NETWORKS,Reproduction_GnRH signaling pathway,2.184827377,EGF,EGF
+BRAIN BANK PROCESS NETWORKS,Reproduction_Gonadotropin regulation,2.429012295,EGF,EGF
+BRAINBANK PATHWAY MAPS,G protein-coupled receptors signaling in lung cancer,2.591008732,EGF,EGF
+TARGET PROCESS NETWORKS,Development_Blood vessel morphogenesis,1.428320885,HIF-prolyl hydroxylase,EGLN1
+BRAIN BANK PROCESS NETWORKS,Development_Neurogenesis_Axonal guidance,2.429012295,ENC1,ENC1
+BRAINBANK PATHWAY MAPS,NRF2 regulation of oxidative stress response,2.646412386,ENC1,ENC1
+BRAIN BANK PROCESS NETWORKS,Development_Neurogenesis_Axonal guidance,2.429012295,Ephrin-A receptor 4,EPHA4
+BRAIN BANK PROCESS NETWORKS,NP_Transmission of nerve impulse,3.330950864,GABA-A receptor alpha-1 subunit,GABRA1
+BRAINBANK PATHWAY MAPS,Tinnitus-associated changes in auditory pathway ,2.646412386,GABA-A receptor alpha-1 subunit,GABRA1
+BRAIN BANK PROCESS NETWORKS,Reproduction_GnRH signaling pathway,2.184827377,GABA-A receptor alpha-1 subunit,GABRA1
+BRAIN BANK PROCESS NETWORKS,Reproduction_Gonadotropin regulation,2.429012295,GABA-A receptor alpha-1 subunit,GABRA1
+BRAIN BANK PROCESS NETWORKS,NP_Transmission of nerve impulse,3.330950864,GABA-A receptor alpha-3 subunit,GABRA3
+BRAIN BANK PROCESS NETWORKS,Reproduction_GnRH signaling pathway,2.184827377,GABA-A receptor alpha-3 subunit,GABRA3
+BRAIN BANK PROCESS NETWORKS,Reproduction_Gonadotropin regulation,2.429012295,GABA-A receptor alpha-3 subunit,GABRA3
+BRAINBANK PATHWAY MAPS,Tinnitus-associated changes in auditory pathway ,2.646412386,GABA-A receptor alpha-3 subunit,GABRA3
+BRAIN BANK PROCESS NETWORKS,Reproduction_GnRH signaling pathway,2.184827377,GABA-A receptor alpha-4 subunit,GABRA4
+BRAIN BANK PROCESS NETWORKS,Reproduction_Gonadotropin regulation,2.429012295,GABA-A receptor alpha-4 subunit,GABRA4
+BRAINBANK PATHWAY MAPS,Tinnitus-associated changes in auditory pathway ,2.646412386,GABA-A receptor alpha-4 subunit,GABRA4
+BRAIN BANK PROCESS NETWORKS,NP_Transmission of nerve impulse,3.330950864,GABA-A receptor alpha-5 subunit,GABRA5
+BRAIN BANK PROCESS NETWORKS,Reproduction_GnRH signaling pathway,2.184827377,GABA-A receptor alpha-5 subunit,GABRA5
+BRAIN BANK PROCESS NETWORKS,Reproduction_Gonadotropin regulation,2.429012295,GABA-A receptor alpha-5 subunit,GABRA5
+BRAINBANK PATHWAY MAPS,Tinnitus-associated changes in auditory pathway ,2.646412386,GABA-A receptor alpha-5 subunit,GABRA5
+BRAIN BANK PROCESS NETWORKS,NP_Transmission of nerve impulse,3.330950864,GABA-A receptor beta-2 subunit,GABRB2
+BRAIN BANK PROCESS NETWORKS,Reproduction_GnRH signaling pathway,2.184827377,GABA-A receptor beta-2 subunit,GABRB2
+BRAIN BANK PROCESS NETWORKS,Reproduction_Gonadotropin regulation,2.429012295,GABA-A receptor beta-2 subunit,GABRB2
+BRAINBANK PATHWAY MAPS,Tinnitus-associated changes in auditory pathway ,2.646412386,GABA-A receptor beta-2 subunit,GABRB2
+BRAINBANK PATHWAY MAPS,Tinnitus-associated changes in auditory pathway ,2.646412386,GAD1,GAD1
+BRAINBANK PATHWAY MAPS,Tinnitus-associated changes in auditory pathway ,2.646412386,GAD2,GAD2
+BRAIN BANK PROCESS NETWORKS,Development_Neurogenesis_Axonal guidance,2.429012295,Guanine deaminase,GDA
+BRAIN BANK PROCESS NETWORKS,NP_Transmission of nerve impulse,3.330950864,GLRA,GLRA1
+BRAINBANK PATHWAY MAPS,Tinnitus-associated changes in auditory pathway ,2.646412386,GLRA,GLRA1
+BRAIN BANK PROCESS NETWORKS,NP_Transmission of nerve impulse,3.330950864,Glycine receptor,GLRA1
+BRAINBANK PATHWAY MAPS,Tinnitus-associated changes in auditory pathway ,2.646412386,Glycine receptor,GLRA1
+BRAIN BANK PROCESS NETWORKS,NP_Transmission of nerve impulse,3.330950864,GlyRA2,GLRA2
+BRAIN BANK PROCESS NETWORKS,NP_Transmission of nerve impulse,3.330950864,Glycine receptor beta chain,GLRB
+BRAINBANK PATHWAY MAPS,Tinnitus-associated changes in auditory pathway ,2.646412386,Glycine receptor beta chain,GLRB
+BRAINBANK PATHWAY MAPS,Oxidative stress_Role of ASK1 under oxidative stress,2.367385283,Glutaredoxin,GLRX3
+BRAIN BANK PROCESS NETWORKS,Reproduction_Gonadotropin regulation,2.429012295,G-protein gamma 3,GNG3
+BRAIN BANK PROCESS NETWORKS,CS_Regulation of CS rearrangement,2.429012295,G-protein beta/gamma,GNG5
+BRAIN BANK PROCESS NETWORKS,MC_Nitric oxide signaling in the cardiovascular system,1.79982837,G-protein beta/gamma,GNG5
+BRAIN BANK PROCESS NETWORKS,Reproduction_GnRH signaling pathway,2.184827377,G-protein beta/gamma,GNG5
+BRAIN BANK PROCESS NETWORKS,Reproduction_Gonadotropin regulation,2.429012295,G-protein beta/gamma,GNG5
+BRAINBANK PATHWAY MAPS,G protein-coupled receptors signaling in lung cancer,2.591008732,G-protein beta/gamma,GNG5
+BRAINBANK PATHWAY MAPS,"NP_Regulation of mp, excitability of cortical pyramidal neurons",2.608533634,G-protein beta/gamma,GNG5
+BRAINBANK PATHWAY MAPS,Altered Ca2+ handling in heart failure,2.193018598,G-protein beta/gamma,GNG5
+BRAIN BANK PROCESS NETWORKS,ST_Neuropeptide signaling pathways,2.602511345,GPR124,GPR124
+BRAINBANK PATHWAY MAPS,G protein-coupled receptors signaling in lung cancer,2.591008732,Galpha(i)-specific cannabis GPSRs,GPR55
+TARGET PROCESS NETWORKS,Development_Blood vessel morphogenesis,1.428320885,Galpha(i)-specific EDG GPCRs,GPR55
+BRAIN BANK PROCESS NETWORKS,CS_Regulation of CS rearrangement,2.429012295,Galpha(i)-specific amine GPCRs,GPRC6A
+BRAIN BANK PROCESS NETWORKS,Development_Blood vessel morphogenesis,1.79982837,Galpha(i)-specific amine GPCRs,GPRC6A
+BRAIN BANK PROCESS NETWORKS,NP_Transmission of nerve impulse,3.330950864,Galpha(i)-specific amine GPCRs,GPRC6A
+TARGET PROCESS NETWORKS,Development_Blood vessel morphogenesis,1.428320885,Galpha(i)-specific peptide GPCRs,GPRC6A
+TARGET PROCESS NETWORKS,ST_Neuropeptide signaling pathways,13.79089631,Galpha(i)-specific peptide GPCRs,GPRC6A
+BRAIN BANK PROCESS NETWORKS,Development_Blood vessel morphogenesis,1.79982837,Galpha(i)-specific peptide GPCRs,GPRC6A
+BRAIN BANK PROCESS NETWORKS,MC,2.429012295,Galpha(i)-specific peptide GPCRs,GPRC6A
+BRAIN BANK PROCESS NETWORKS,NP_Transmission of nerve impulse,3.330950864,Galpha(i)-specific peptide GPCRs,GPRC6A
+BRAIN BANK PROCESS NETWORKS,ST_Neuropeptide signaling pathways,2.602511345,Galpha(i)-specific peptide GPCRs,GPRC6A
+BRAINBANK PATHWAY MAPS,G protein-coupled receptors signaling in lung cancer,2.591008732,Galpha(i)-specific peptide GPCRs,GPRC6A
+BRAIN BANK PROCESS NETWORKS,Development_Blood vessel morphogenesis,1.79982837,Galpha(q)-specific amine GPCRs,GPRC6A
+BRAIN BANK PROCESS NETWORKS,MC,2.429012295,Galpha(q)-specific amine GPCRs,GPRC6A
+TARGET PROCESS NETWORKS,Development_Blood vessel morphogenesis,1.428320885,Galpha(q)-specific nucleotide-like GPCRs,GPRC6A
+BRAIN BANK PROCESS NETWORKS,Development_Blood vessel morphogenesis,1.79982837,Galpha(q)-specific nucleotide-like GPCRs,GPRC6A
+TARGET PROCESS NETWORKS,Development_Blood vessel morphogenesis,1.428320885,Galpha(q)-specific peptide GPCRs,GPRC6A
+TARGET PROCESS NETWORKS,ST_Neuropeptide signaling pathways,13.79089631,Galpha(q)-specific peptide GPCRs,GPRC6A
+BRAIN BANK PROCESS NETWORKS,Development_Blood vessel morphogenesis,1.79982837,Galpha(q)-specific peptide GPCRs,GPRC6A
+BRAIN BANK PROCESS NETWORKS,MC,2.429012295,Galpha(q)-specific peptide GPCRs,GPRC6A
+BRAIN BANK PROCESS NETWORKS,ST_Neuropeptide signaling pathways,2.602511345,Galpha(q)-specific peptide GPCRs,GPRC6A
+BRAINBANK PATHWAY MAPS,G protein-coupled receptors signaling in lung cancer,2.591008732,Galpha(q)-specific peptide GPCRs,GPRC6A
+TARGET PROCESS NETWORKS,ST_Neuropeptide signaling pathways,13.79089631,Galpha(s)-specific calcitonin GPCRs,GPRC6A
+BRAIN BANK PROCESS NETWORKS,Development_Blood vessel morphogenesis,1.79982837,Galpha(s)-specific CRF GPCRs,GPRC6A
+BRAIN BANK PROCESS NETWORKS,Development_Blood vessel morphogenesis,1.79982837,Galpha(s)-specific nucleotide-like GPCRs,GPRC6A
+TARGET PROCESS NETWORKS,ST_Neuropeptide signaling pathways,13.79089631,Galpha(s)-specific peptide GPCRs,GPRC6A
+BRAIN BANK PROCESS NETWORKS,ST_Neuropeptide signaling pathways,2.602511345,Galpha(s)-specific peptide GPCRs,GPRC6A
+BRAIN BANK PROCESS NETWORKS,NP_Transmission of nerve impulse,3.330950864,Galpha(i)-specific metabotropic glutamate GPCRs,GRM5
+BRAIN BANK PROCESS NETWORKS,Reproduction_GnRH signaling pathway,2.184827377,Galpha(i)-specific metabotropic glutamate GPCRs,GRM5
+BRAIN BANK PROCESS NETWORKS,Reproduction_Gonadotropin regulation,2.429012295,Galpha(i)-specific metabotropic glutamate GPCRs,GRM5
+BRAIN BANK PROCESS NETWORKS,NP_Transmission of nerve impulse,3.330950864,GRM6,GRM6
+BRAINBANK PATHWAY MAPS,Tinnitus-associated changes in auditory pathway ,2.646412386,GRM6,GRM6
+BRAIN BANK PROCESS NETWORKS,MC_Nitric oxide signaling in the cardiovascular system,1.79982837,Guanylate Cyclase 1,GUCY1B1
+BRAIN BANK PROCESS NETWORKS,MC,2.429012295,Guanylate Cyclase 1,GUCY1B1
+BRAIN BANK PROCESS NETWORKS,Reproduction_GnRH signaling pathway,2.184827377,Guanylate Cyclase 1,GUCY1B1
+BRAIN BANK PROCESS NETWORKS,Reproduction_Gonadotropin regulation,2.429012295,Guanylate Cyclase 1,GUCY1B1
+BRAINBANK PATHWAY MAPS,"ST_Non-neuronal ACM1, ACM3 and ACM5 signaling",2.193018598,Guanylate Cyclase 1,GUCY1B1
+BRAIN BANK PROCESS NETWORKS,MC,2.429012295,HCN2,HCN2
+BRAINBANK PATHWAY MAPS,Tinnitus-associated changes in auditory pathway ,2.646412386,HCN2,HCN2
+BRAIN BANK PROCESS NETWORKS,PF_Folding in normal condition,3.330950864,Hdj-2,HDJ2
+BRAINBANK PATHWAY MAPS,"NP_Regulation of mp, excitability of cortical pyramidal neurons",2.608533634,HPCA,HPCA
+BRAIN BANK PROCESS NETWORKS,MC_Nitric oxide signaling in the cardiovascular system,1.79982837,HSP90,HSP90AB1
+BRAIN BANK PROCESS NETWORKS,PF_Folding in normal condition,3.330950864,HSP90,HSP90AB1
+BRAIN BANK PROCESS NETWORKS,PF_Folding in normal condition,3.330950864,HSP90 beta,HSP90AB1
+BRAIN BANK PROCESS NETWORKS,PF_Folding in normal condition,3.330950864,HSC70,HSPA1A
+BRAIN BANK PROCESS NETWORKS,PF_Folding in normal condition,3.330950864,HSP70,HSPA1A
+BRAIN BANK PROCESS NETWORKS,PF_Folding in normal condition,3.330950864,HSPA4,HSPA4
+BRAIN BANK PROCESS NETWORKS,NP_Transmission of nerve impulse,3.330950864,Serotonin receptor,HTR2A
+BRAIN BANK PROCESS NETWORKS,NP_Transmission of nerve impulse,3.330950864,HTR2A,HTR2A
+BRAINBANK PATHWAY MAPS,"NP_Regulation of mp, excitability of cortical pyramidal neurons",2.608533634,HTR2A,HTR2A
+TARGET PATHWAY MAPS,PF and maturation_POMC processing,20.6530749,Joining peptide (JP),JCHAIN
+TARGET PROCESS NETWORKS,ST_Neuropeptide signaling pathways,13.79089631,Joining peptide (JP),JCHAIN
+BRAIN BANK PROCESS NETWORKS,NP_Transmission of nerve impulse,3.330950864,Kv4.2 channel,KCND2
+TARGET PROCESS NETWORKS,Development_Blood vessel morphogenesis,1.428320885,Lactoferrin,LTF
+BRAIN BANK PROCESS NETWORKS,Development_Blood vessel morphogenesis,1.79982837,MEK4(MAP2K4),MAP2K4
+BRAIN BANK PROCESS NETWORKS,Reproduction_Gonadotropin regulation,2.429012295,MEK4(MAP2K4),MAP2K4
+BRAINBANK PATHWAY MAPS,NRF2 regulation of oxidative stress response,2.646412386,MEK4(MAP2K4),MAP2K4
+BRAINBANK PATHWAY MAPS,Oxidative stress_Role of ASK1 under oxidative stress,2.367385283,MEK4(MAP2K4),MAP2K4
+BRAINBANK PATHWAY MAPS,ST_Calcium-mediated signaling,2.193018598,MEK4(MAP2K4),MAP2K4
+BRAIN BANK PROCESS NETWORKS,CS_Regulation of CS rearrangement,2.429012295,ERK2 (MAPK1),MAPK1
+BRAIN BANK PROCESS NETWORKS,Development_Blood vessel morphogenesis,1.79982837,ERK2 (MAPK1),MAPK1
+BRAIN BANK PROCESS NETWORKS,NP_Transmission of nerve impulse,3.330950864,ERK2 (MAPK1),MAPK1
+BRAIN BANK PROCESS NETWORKS,ST_Neuropeptide signaling pathways,2.602511345,ERK2 (MAPK1),MAPK1
+BRAINBANK PATHWAY MAPS,NRF2 regulation of oxidative stress response,2.646412386,ERK2 (MAPK1),MAPK1
+BRAINBANK PATHWAY MAPS,ST_Erk Interactions: Inhibition of Erk,2.193018598,ERK2 (MAPK1),MAPK1
+BRAIN BANK PROCESS NETWORKS,CS_Regulation of CS rearrangement,2.429012295,ERK1/2,MAPK3
+BRAIN BANK PROCESS NETWORKS,Development_Blood vessel morphogenesis,1.79982837,ERK1/2,MAPK3
+BRAIN BANK PROCESS NETWORKS,Development_Neurogenesis_Axonal guidance,2.429012295,ERK1/2,MAPK3
+BRAIN BANK PROCESS NETWORKS,NP_Transmission of nerve impulse,3.330950864,ERK1/2,MAPK3
+BRAIN BANK PROCESS NETWORKS,Reproduction_GnRH signaling pathway,2.184827377,ERK1/2,MAPK3
+BRAIN BANK PROCESS NETWORKS,Reproduction_Gonadotropin regulation,2.429012295,ERK1/2,MAPK3
+BRAIN BANK PROCESS NETWORKS,ST_Neuropeptide signaling pathways,2.602511345,ERK1/2,MAPK3
+BRAINBANK PATHWAY MAPS,G protein-coupled receptors signaling in lung cancer,2.591008732,ERK1/2,MAPK3
+BRAINBANK PATHWAY MAPS,ST_Calcium-mediated signaling,2.193018598,ERK1/2,MAPK3
+BRAINBANK PATHWAY MAPS,ST_Erk Interactions: Inhibition of Erk,2.193018598,ERK1/2,MAPK3
+BRAINBANK PATHWAY MAPS,"ST_Non-neuronal ACM1, ACM3 and ACM5 signaling",2.193018598,ERK1/2,MAPK3
+TARGET PATHWAY MAPS,"POMC, alpha-MSH, AGRP, food intake, energy exp in hypothalamus",2.676543316,MC4R,MC4R
+TARGET PROCESS NETWORKS,ST_Neuropeptide signaling pathways,13.79089631,MC4R,MC4R
+BRAIN BANK PROCESS NETWORKS,ST_Neuropeptide signaling pathways,2.602511345,MC4R,MC4R
+BRAINBANK PATHWAY MAPS,ST_Calcium-mediated signaling,2.193018598,MEF2,MEF2C
+BRAIN BANK PROCESS NETWORKS,MC_Nitric oxide signaling in the cardiovascular system,1.79982837,MEF2C,MEF2C
+BRAINBANK PATHWAY MAPS,"ST_Non-neuronal ACM1, ACM3 and ACM5 signaling",2.193018598,MEF2C,MEF2C
+BRAIN BANK PROCESS NETWORKS,CS_Regulation of CS rearrangement,2.429012295,MELC,melC
+BRAIN BANK PROCESS NETWORKS,Development_Neurogenesis_Axonal guidance,2.429012295,MELC,melC
+BRAIN BANK PROCESS NETWORKS,MC,2.429012295,MELC,melC
+TARGET PATHWAY MAPS,PF and maturation_POMC processing,20.6530749,gamma2-MSH,MSH2
+TARGET PROCESS NETWORKS,ST_Neuropeptide signaling pathways,13.79089631,gamma2-MSH,MSH2
+TARGET PATHWAY MAPS,PF and maturation_POMC processing,20.6530749,gamma3-MSH,MSH2
+TARGET PROCESS NETWORKS,ST_Neuropeptide signaling pathways,13.79089631,gamma3-MSH,MSH2
+BRAIN BANK PROCESS NETWORKS,MC,2.429012295,Myotrophin,MTPN
+BRAIN BANK PROCESS NETWORKS,MC,2.429012295,Smooth muscle myosin,MYH11
+BRAINBANK PATHWAY MAPS,"ST_Non-neuronal ACM1, ACM3 and ACM5 signaling",2.193018598,MRLC2,MYL12B
+BRAIN BANK PROCESS NETWORKS,CS_Regulation of CS rearrangement,2.429012295,MRLC,MYL9
+BRAIN BANK PROCESS NETWORKS,MC,2.429012295,MRLC,MYL9
+BRAINBANK PATHWAY MAPS,"ST_Non-neuronal ACM1, ACM3 and ACM5 signaling",2.193018598,MRLC,MYL9
+BRAINBANK PATHWAY MAPS,"NP_Regulation of mp, excitability of cortical pyramidal neurons",2.608533634,Neurocalcin delta,NCALD
+BRAIN BANK PROCESS NETWORKS,Development_Neurogenesis_Axonal guidance,2.429012295,NckAP1,NCKAP1
+BRAINBANK PATHWAY MAPS,NRF2 regulation of oxidative stress response,2.646412386,SMRT,NCOR2
+BRAINBANK PATHWAY MAPS,Ubiquinone metabolism,2.608533634,NDUFA1,NDUFA1
+BRAINBANK PATHWAY MAPS,Ubiquinone metabolism,2.608533634,NDUFA4,NDUFA4
+BRAINBANK PATHWAY MAPS,Ubiquinone metabolism,2.608533634,NDUFA5,NDUFA5
+BRAINBANK PATHWAY MAPS,Ubiquinone metabolism,2.608533634,NDUFA8,NDUFA8
+BRAINBANK PATHWAY MAPS,Ubiquinone metabolism,2.608533634,NDUFAB1,NDUFAB1
+BRAINBANK PATHWAY MAPS,Ubiquinone metabolism,2.608533634,NDUFB1,NDUFB1
+BRAINBANK PATHWAY MAPS,Ubiquinone metabolism,2.608533634,NDUFB3,NDUFB3
+BRAINBANK PATHWAY MAPS,Ubiquinone metabolism,2.608533634,NDUFB4,NDUFB4
+BRAINBANK PATHWAY MAPS,Ubiquinone metabolism,2.608533634,NDUFB6,NDUFB6
+BRAINBANK PATHWAY MAPS,Ubiquinone metabolism,2.608533634,NDUFS4,NDUFS4
+BRAINBANK PATHWAY MAPS,Ubiquinone metabolism,2.608533634,NDUFS6,NDUFS6
+BRAIN BANK PROCESS NETWORKS,ST_Neuropeptide signaling pathways,2.602511345,NPFF receptor 2,NPFFR2
+BRAIN BANK PROCESS NETWORKS,ST_Neuropeptide signaling pathways,2.602511345,NPY,NPY
+TARGET PROCESS NETWORKS,Development_Blood vessel morphogenesis,1.428320885,Neuropilin-2,NRP2
+BRAIN BANK PROCESS NETWORKS,ST_Neuropeptide signaling pathways,2.602511345,PAM,PAM
+BRAIN BANK PROCESS NETWORKS,Development_Blood vessel morphogenesis,1.79982837,PDE,PDE1A
+BRAIN BANK PROCESS NETWORKS,MC_Nitric oxide signaling in the cardiovascular system,1.79982837,PDE4A,PDE4A
+BRAIN BANK PROCESS NETWORKS,Development_Blood vessel morphogenesis,1.79982837,PI3K reg class IA,PIK3CA
+BRAIN BANK PROCESS NETWORKS,Development_Neurogenesis_Axonal guidance,2.429012295,PI3K reg class IA,PIK3CA
+BRAIN BANK PROCESS NETWORKS,MC_Nitric oxide signaling in the cardiovascular system,1.79982837,PI3K reg class IA,PIK3CA
+BRAIN BANK PROCESS NETWORKS,Reproduction_GnRH signaling pathway,2.184827377,PI3K reg class IA,PIK3CA
+BRAIN BANK PROCESS NETWORKS,Reproduction_Gonadotropin regulation,2.429012295,PI3K reg class IA,PIK3CA
+BRAINBANK PATHWAY MAPS,NRF2 regulation of oxidative stress response,2.646412386,PI3K reg class IA,PIK3CA
+BRAINBANK PATHWAY MAPS,"ST_Non-neuronal ACM1, ACM3 and ACM5 signaling",2.193018598,PI3K reg class IA,PIK3CA
+BRAIN BANK PROCESS NETWORKS,ST_Neuropeptide signaling pathways,2.602511345,PKD1L1,PKD1L1
+TARGET PROCESS NETWORKS,Development_Blood vessel morphogenesis,1.428320885,PLAT (TPA),PLAT
+TARGET PATHWAY MAPS,PF and maturation_POMC processing,20.6530749,N-POC,POMC
+TARGET PROCESS NETWORKS,ST_Neuropeptide signaling pathways,13.79089631,N-POC,POMC
+TARGET PATHWAY MAPS,PF and maturation_POMC processing,20.6530749,N-POMC,POMC
+TARGET PROCESS NETWORKS,ST_Neuropeptide signaling pathways,13.79089631,N-POMC,POMC
+TARGET PATHWAY MAPS,"POMC, alpha-MSH, AGRP, food intake, energy exp in hypothalamus",2.676543316,proACTH,POMC
+TARGET PATHWAY MAPS,PF and maturation_POMC processing,20.6530749,proACTH,POMC
+TARGET PROCESS NETWORKS,ST_Neuropeptide signaling pathways,13.79089631,proACTH,POMC
+TARGET PATHWAY MAPS,PF and maturation_POMC processing,20.6530749,ACTH,POMC
+TARGET PROCESS NETWORKS,ST_Neuropeptide signaling pathways,13.79089631,ACTH,POMC
+TARGET PATHWAY MAPS,PF and maturation_POMC processing,20.6530749,ACTH 1-17,POMC
+TARGET PROCESS NETWORKS,ST_Neuropeptide signaling pathways,13.79089631,ACTH 1-17,POMC
+TARGET PATHWAY MAPS,PF and maturation_POMC processing,20.6530749,beta-Endorphin,POMC
+TARGET PROCESS NETWORKS,ST_Neuropeptide signaling pathways,13.79089631,beta-Endorphin,POMC
+TARGET PATHWAY MAPS,"POMC, alpha-MSH, AGRP, food intake, energy exp in hypothalamus",2.676543316,beta-LPH,POMC
+TARGET PATHWAY MAPS,PF and maturation_POMC processing,20.6530749,beta-LPH,POMC
+TARGET PROCESS NETWORKS,ST_Neuropeptide signaling pathways,13.79089631,beta-LPH,POMC
+TARGET PATHWAY MAPS,PF and maturation_POMC processing,20.6530749,beta-MSH,POMC
+TARGET PROCESS NETWORKS,ST_Neuropeptide signaling pathways,13.79089631,beta-MSH,POMC
+TARGET PATHWAY MAPS,"POMC, alpha-MSH, AGRP, food intake, energy exp in hypothalamus",2.676543316,Beta-MSH / Beta-Endorphin,POMC
+TARGET PATHWAY MAPS,PF and maturation_POMC processing,20.6530749,DA-alphaMSH,POMC
+TARGET PROCESS NETWORKS,ST_Neuropeptide signaling pathways,13.79089631,DA-alphaMSH,POMC
+TARGET PATHWAY MAPS,PF and maturation_POMC processing,20.6530749,gamma-LPH,POMC
+TARGET PROCESS NETWORKS,ST_Neuropeptide signaling pathways,13.79089631,gamma-LPH,POMC
+TARGET PATHWAY MAPS,PF and maturation_POMC processing,20.6530749,gamma-MSH,POMC
+TARGET PROCESS NETWORKS,ST_Neuropeptide signaling pathways,13.79089631,gamma-MSH,POMC
+TARGET PATHWAY MAPS,"POMC, alpha-MSH, AGRP, food intake, energy exp in hypothalamus",2.676543316,POMC,POMC
+TARGET PATHWAY MAPS,PF and maturation_POMC processing,20.6530749,POMC,POMC
+TARGET PROCESS NETWORKS,ST_Neuropeptide signaling pathways,13.79089631,POMC,POMC
+BRAIN BANK PROCESS NETWORKS,PF_Folding in normal condition,3.330950864,PPID,PPID
+BRAIN BANK PROCESS NETWORKS,Development_Neurogenesis_Axonal guidance,2.429012295,PP1-cat,PPP1CA
+BRAIN BANK PROCESS NETWORKS,MC_Nitric oxide signaling in the cardiovascular system,1.79982837,PP1-cat,PPP1CA
+BRAINBANK PATHWAY MAPS,Altered Ca2+ handling in heart failure,2.193018598,PP1-cat,PPP1CA
+BRAIN BANK PROCESS NETWORKS,MC_Nitric oxide signaling in the cardiovascular system,1.79982837,PP2A catalytic,PPP2CA
+BRAIN BANK PROCESS NETWORKS,MC,2.429012295,PP2A catalytic,PPP2CA
+BRAINBANK PATHWAY MAPS,Altered Ca2+ handling in heart failure,2.193018598,PP2A catalytic,PPP2CA
+BRAINBANK PATHWAY MAPS,Oxidative stress_Role of ASK1 under oxidative stress,2.367385283,PP2A catalytic,PPP2CA
+BRAINBANK PATHWAY MAPS,ST_Erk Interactions: Inhibition of Erk,2.193018598,PP2A catalytic,PPP2CA
+BRAIN BANK PROCESS NETWORKS,Development_Neurogenesis_Axonal guidance,2.429012295,Calcineurin A (catalytic),PPP3CA
+BRAIN BANK PROCESS NETWORKS,MC_Nitric oxide signaling in the cardiovascular system,1.79982837,Calcineurin A (catalytic),PPP3CA
+BRAIN BANK PROCESS NETWORKS,PF_Folding in normal condition,3.330950864,Calcineurin A (catalytic),PPP3CA
+BRAINBANK PATHWAY MAPS,Altered Ca2+ handling in heart failure,2.193018598,Calcineurin A (catalytic),PPP3CA
+BRAINBANK PATHWAY MAPS,"NP_Regulation of mp, excitability of cortical pyramidal neurons",2.608533634,Calcineurin A (catalytic),PPP3CA
+BRAINBANK PATHWAY MAPS,ST_Calcium-mediated signaling,2.193018598,Calcineurin A (catalytic),PPP3CA
+BRAINBANK PATHWAY MAPS,ST_Erk Interactions: Inhibition of Erk,2.193018598,Calcineurin A (catalytic),PPP3CA
+BRAIN BANK PROCESS NETWORKS,PF_Folding in normal condition,3.330950864,Calcineurin A (beta),PPP3CB
+BRAINBANK PATHWAY MAPS,NRF2 regulation of oxidative stress response,2.646412386,PRDX1,PRDX1
+BRAINBANK PATHWAY MAPS,Oxidative stress_Role of ASK1 under oxidative stress,2.367385283,PRDX1,PRDX1
+BRAIN BANK PROCESS NETWORKS,NP_Transmission of nerve impulse,3.330950864,PRKAR1A,PRKAR1A
+BRAIN BANK PROCESS NETWORKS,Development_Neurogenesis_Axonal guidance,2.429012295,PKA-reg (cAMP-dependent),PRKAR1B
+BRAIN BANK PROCESS NETWORKS,MC_Nitric oxide signaling in the cardiovascular system,1.79982837,PKA-reg (cAMP-dependent),PRKAR1B
+BRAIN BANK PROCESS NETWORKS,NP_Transmission of nerve impulse,3.330950864,PKA-reg (cAMP-dependent),PRKAR1B
+BRAIN BANK PROCESS NETWORKS,Reproduction_GnRH signaling pathway,2.184827377,PKA-reg (cAMP-dependent),PRKAR1B
+BRAIN BANK PROCESS NETWORKS,Reproduction_Gonadotropin regulation,2.429012295,PKA-reg (cAMP-dependent),PRKAR1B
+BRAIN BANK PROCESS NETWORKS,ST_Neuropeptide signaling pathways,2.602511345,PKA-reg (cAMP-dependent),PRKAR1B
+BRAINBANK PATHWAY MAPS,G protein-coupled receptors signaling in lung cancer,2.591008732,PKA-reg (cAMP-dependent),PRKAR1B
+BRAINBANK PATHWAY MAPS,"NP_Regulation of mp, excitability of cortical pyramidal neurons",2.608533634,PKA-reg (cAMP-dependent),PRKAR1B
+BRAINBANK PATHWAY MAPS,"ST_Non-neuronal ACM1, ACM3 and ACM5 signaling",2.193018598,PKA-reg (cAMP-dependent),PRKAR1B
+BRAINBANK PATHWAY MAPS,ST_Erk Interactions: Inhibition of Erk,2.193018598,PKA-reg (cAMP-dependent),PRKAR1B
+BRAIN BANK PROCESS NETWORKS,MC_Nitric oxide signaling in the cardiovascular system,1.79982837,PKA-reg type II (cAMP-dependent),PRKAR2B
+BRAIN BANK PROCESS NETWORKS,NP_Transmission of nerve impulse,3.330950864,PRKAR2B,PRKAR2B
+BRAIN BANK PROCESS NETWORKS,Development_Neurogenesis_Axonal guidance,2.429012295,cPKC (conventional),PRKCA
+BRAIN BANK PROCESS NETWORKS,MC,2.429012295,cPKC (conventional),PRKCA
+BRAIN BANK PROCESS NETWORKS,NP_Transmission of nerve impulse,3.330950864,cPKC (conventional),PRKCA
+BRAINBANK PATHWAY MAPS,"NP_Regulation of mp, excitability of cortical pyramidal neurons",2.608533634,cPKC (conventional),PRKCA
+BRAINBANK PATHWAY MAPS,ST_Calcium-mediated signaling,2.193018598,cPKC (conventional),PRKCA
+BRAIN BANK PROCESS NETWORKS,CS_Regulation of CS rearrangement,2.429012295,PKC,PRKCA
+BRAIN BANK PROCESS NETWORKS,MC,2.429012295,PKC,PRKCA
+BRAINBANK PATHWAY MAPS,"NP_Regulation of mp, excitability of cortical pyramidal neurons",2.608533634,PKC,PRKCA
+BRAINBANK PATHWAY MAPS,NRF2 regulation of oxidative stress response,2.646412386,PKC,PRKCA
+BRAINBANK PATHWAY MAPS,ST_Calcium-mediated signaling,2.193018598,PKC,PRKCA
+BRAINBANK PATHWAY MAPS,ST_Erk Interactions: Inhibition of Erk,2.193018598,PKC,PRKCA
+BRAINBANK PATHWAY MAPS,"ST_Non-neuronal ACM1, ACM3 and ACM5 signaling",2.193018598,PKC,PRKCA
+BRAIN BANK PROCESS NETWORKS,NP_Transmission of nerve impulse,3.330950864,PKC-beta,PRKCB
+BRAIN BANK PROCESS NETWORKS,Reproduction_GnRH signaling pathway,2.184827377,PKC-beta,PRKCB
+BRAIN BANK PROCESS NETWORKS,Reproduction_Gonadotropin regulation,2.429012295,PKC-beta,PRKCB
+BRAINBANK PATHWAY MAPS,ST_Calcium-mediated signaling,2.193018598,PKC-beta,PRKCB
+BRAIN BANK PROCESS NETWORKS,Reproduction_Gonadotropin regulation,2.429012295,PKC-beta1,PRKCB
+BRAIN BANK PROCESS NETWORKS,Reproduction_GnRH signaling pathway,2.184827377,PKC-beta2,PRKCB
+BRAIN BANK PROCESS NETWORKS,Reproduction_Gonadotropin regulation,2.429012295,PKC-beta2,PRKCB
+BRAIN BANK PROCESS NETWORKS,Reproduction_GnRH signaling pathway,2.184827377,Protein kinase G 2,PRKG2
+BRAIN BANK PROCESS NETWORKS,Reproduction_Gonadotropin regulation,2.429012295,Protein kinase G 2,PRKG2
+BRAIN BANK PROCESS NETWORKS,CS_Regulation of CS rearrangement,2.429012295,Protein kinase G,PRKGR1B
+BRAIN BANK PROCESS NETWORKS,Development_Blood vessel morphogenesis,1.79982837,Protein kinase G,PRKGR1B
+BRAIN BANK PROCESS NETWORKS,MC,2.429012295,Protein kinase G,PRKGR1B
+BRAIN BANK PROCESS NETWORKS,Reproduction_GnRH signaling pathway,2.184827377,Protein kinase G,PRKGR1B
+BRAIN BANK PROCESS NETWORKS,Reproduction_Gonadotropin regulation,2.429012295,Protein kinase G,PRKGR1B
+BRAINBANK PATHWAY MAPS,"ST_Non-neuronal ACM1, ACM3 and ACM5 signaling",2.193018598,Protein kinase G,PRKGR1B
+BRAIN BANK PROCESS NETWORKS,Development_Neurogenesis_Axonal guidance,2.429012295,Calcyclin,S100A6
+TARGET PROCESS NETWORKS,Development_Blood vessel morphogenesis,1.428320885,S1P1 receptor,S1PR1
+BRAIN BANK PROCESS NETWORKS,ST_Neuropeptide signaling pathways,2.602511345,Secretogranin V,SCG5
+BRAIN BANK PROCESS NETWORKS,Development_Neurogenesis_Axonal guidance,2.429012295,Syntenin 1,SDCBP
+BRAIN BANK PROCESS NETWORKS,Development_Neurogenesis_Axonal guidance,2.429012295,Selenoprotein P,SELENOP
+BRAIN BANK PROCESS NETWORKS,Development_Neurogenesis_Axonal guidance,2.429012295,Semaphorin 3C,SEMA3C
+BRAIN BANK PROCESS NETWORKS,Development_Neurogenesis_Axonal guidance,2.429012295,Semaphorin 3E,SEMA3E
+BRAIN BANK PROCESS NETWORKS,Development_Neurogenesis_Axonal guidance,2.429012295,Semaphorin 5A,SEMA5A
+BRAIN BANK PROCESS NETWORKS,CS_Regulation of CS rearrangement,2.429012295,Zeta-sarcoglycan,SGCZ
+BRAIN BANK PROCESS NETWORKS,MC,2.429012295,NCX1,SLC8A1
+BRAINBANK PATHWAY MAPS,Altered Ca2+ handling in heart failure,2.193018598,NCX1,SLC8A1
+BRAINBANK PATHWAY MAPS,NRF2 regulation of oxidative stress response,2.646412386,SOD1,SOD1
+BRAINBANK PATHWAY MAPS,Oxidative stress_Role of ASK1 under oxidative stress,2.367385283,SOD1,SOD1
+BRAIN BANK PROCESS NETWORKS,Development_Neurogenesis_Axonal guidance,2.429012295,Mindin,SPON2
+BRAIN BANK PROCESS NETWORKS,ST_Neuropeptide signaling pathways,2.602511345,SSTR1,SSTR1
+BRAIN BANK PROCESS NETWORKS,ST_Neuropeptide signaling pathways,2.602511345,SSTR2,SSTR2
+BRAINBANK PATHWAY MAPS,G protein-coupled receptors signaling in lung cancer,2.591008732,SSTR2,SSTR2
+BRAINBANK PATHWAY MAPS,Oxidative stress_Role of ASK1 under oxidative stress,2.367385283,UNRIP,STRAP
+BRAIN BANK PROCESS NETWORKS,ST_Neuropeptide signaling pathways,2.602511345,Substance P,TAC1
+BRAIN BANK PROCESS NETWORKS,ST_Neuropeptide signaling pathways,2.602511345,Substance P extracellular region,TAC1
+BRAIN BANK PROCESS NETWORKS,PF_Folding in normal condition,3.330950864,TCP1-alpha,TCP1
+BRAINBANK PATHWAY MAPS,"NP_Regulation of mp, excitability of cortical pyramidal neurons",2.608533634,TRPC4,TRPC4
+BRAINBANK PATHWAY MAPS,"NP_Regulation of mp, excitability of cortical pyramidal neurons",2.608533634,TRPC5,TRPC5
+BRAIN BANK PROCESS NETWORKS,CS_Regulation of CS rearrangement,2.429012295,Tubulin alpha,TUBA1A
+BRAIN BANK PROCESS NETWORKS,CS_Regulation of CS rearrangement,2.429012295,Tubulin alpha 1A,TUBA1A 
+BRAINBANK PATHWAY MAPS,Oxidative stress_Role of ASK1 under oxidative stress,2.367385283,Thioredoxin,TXN
+BRAINBANK PATHWAY MAPS,NRF2 regulation of oxidative stress response,2.646412386,Thioredoxin,TXN
+BRAINBANK PATHWAY MAPS,Oxidative stress_Role of ASK1 under oxidative stress,2.367385283,TXNIP (VDUP1),TXNIP
+BRAINBANK PATHWAY MAPS,NRF2 regulation of oxidative stress response,2.646412386,TXNRD1,TXNRD1
+BRAIN BANK PROCESS NETWORKS,PF_Folding in normal condition,3.330950864,VBP-1,VBP1
+TARGET PROCESS NETWORKS,Development_Blood vessel morphogenesis,1.428320885,VCAM1,VCAM1
+BRAIN BANK PROCESS NETWORKS,CS_Regulation of CS rearrangement,2.429012295,14-3-3 beta/alpha,YWHAB
+BRAIN BANK PROCESS NETWORKS,CS_Regulation of CS rearrangement,2.429012295,37694,YWHAB
+BRAINBANK PATHWAY MAPS,Oxidative stress_Role of ASK1 under oxidative stress,2.367385283,37694,YWHAB
+BRAINBANK PATHWAY MAPS,ST_Calcium-mediated signaling,2.193018598,37694,YWHAB
+BRAIN BANK PROCESS NETWORKS,CS_Regulation of CS rearrangement,2.429012295,14-3-3 eta,YWHAH
+BRAIN BANK PROCESS NETWORKS,Development_Neurogenesis_Axonal guidance,2.429012295,14-3-3 eta,YWHAH
