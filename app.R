@@ -120,7 +120,7 @@ ui <- dashboardPage(
     tabItem(
       tabName = "DESeq_table",
       br(),
-      h2("Full Table of DESeq Results"),
+      h2("Full Table of DESeq2 Results"),
       br(),
       DT::dataTableOutput("fulltable"),
       br(),
