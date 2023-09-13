@@ -18,8 +18,7 @@ library(shinycssloaders)
 exprs_data <- readRDS("./data/combinedExpressionData.rds")
 
 # deseq results  ################################################################
-deseq_df <- readRDS("./data/combinedResults.rds") %>%
-  rename(BH_P_Value = "FDR_P_Value")
+deseq_df <- readRDS("./data/combinedResults.rds")
 
 display_deseq_df <- dplyr::select(
   deseq_df,

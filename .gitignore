@@ -3,8 +3,5 @@
 .RData
 .Ruserdata
 
-data/Matrices/
-data/testServerWorkflow.R
-data/transformAlsDataIntoTheCorrectFormat.R
-data/README.html
+data/
 .Rproj.user/
